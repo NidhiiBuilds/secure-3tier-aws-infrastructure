@@ -65,8 +65,6 @@ Detailed documentation is available below:
 
 ## Security Considerations
 
-## Security Considerations
-
 - RDS was configured with encryption at rest.
 - RDS public accessibility was disabled.
 - Database traffic was restricted to the EC2 security group.
