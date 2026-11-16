@@ -31,6 +31,15 @@ The project uses the following infrastructure components:
 - **Amazon RDS:** MySQL database configured in private subnets with encryption enabled.
 - **Security Groups:** Control traffic between infrastructure components.
 
+## Project Documentation
+
+Detailed documentation is available below:
+
+- [Architecture](docs/architecture.md)
+- [Deployment Guide](docs/deployment-guide.md)
+- [Security Design](docs/security-design.md)
+- [Testing and Validation](docs/testing-and-validation.md)
+
 ## AWS Services Used
 
 | Service | Purpose |
@@ -56,11 +65,15 @@ The project uses the following infrastructure components:
 
 ## Security Considerations
 
+## Security Considerations
+
 - RDS was configured with encryption at rest.
 - RDS public accessibility was disabled.
 - Database traffic was restricted to the EC2 security group.
-- EC2 SSH access was restricted to a specific source IP.
+- The EC2 instance was deployed in a public subnet, while RDS remained in private subnets.
 - Security groups were configured to control inbound traffic.
+
+**Note:** The application-to-database connection was not implemented or tested.
 
 ## Testing and Validation
 
@@ -87,6 +100,8 @@ To minimize costs:
 Successfully designed, deployed, tested, and cleaned up a foundational AWS infrastructure environment using core networking, compute, load balancing, database, and security services.
 
 This project strengthened practical understanding of AWS infrastructure deployment, network isolation, traffic management, security group configuration, database security, and resource lifecycle management.
+
+The application-to-database connection was not implemented, and HTTPS was not configured. The project focuses on infrastructure deployment and validation.
 
 ## Future Improvements
 
